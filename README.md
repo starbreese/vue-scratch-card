@@ -1,6 +1,6 @@
 # vue-scratch-card
 
-> A Vue.js project
+> A Vue.js project(component)
 
 ## Build Setup
 

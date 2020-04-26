@@ -6,7 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'vue-scratch-card.js',
+    library : 'vue-scratch-card',  //设置的是使用require时的模块名
+    libraryTarget : 'umd',    //libraryTarget可以设置不同的umd代码，可以是commonjs标准、amd标准，也可以生成通过script标签引入的
+    umdNamedDefine : true,    //会对UMD的构建过程中的amd模块进行命名，否则就用匿名的define
   },
   module: {
     rules: [

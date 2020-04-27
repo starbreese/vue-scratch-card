@@ -1,18 +1,32 @@
 <template>
   <div id="app">
-   
+    <vue-scratch-card 
+        element-id='scratchWrap'
+        :ratio=0.5
+        :move-radius=50
+        :start-callback=startCallback
+        :clear-callback=clearCallback
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'app',
+    data () {
+        return {
+            msg: 'Welcome to Your Vue.js App'
+        };
+    },
+    methods : {
+        startCallback(){
+            console.log('抽奖成功！');
+        },
+        clearCallback(){
+            console.log('清除完毕！');
+        }
     }
-  }
-}
+};
 </script>
 
 <style lang="scss">
@@ -23,23 +37,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
 }
 </style>

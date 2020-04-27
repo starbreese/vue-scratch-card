@@ -1,4 +1,4 @@
-# vue-scratch-card
+# vue-scratch-cards
 
 > A Vue.js project(component)
 
